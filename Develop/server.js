@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const DbArray = require('./db/notesdb');
+const NotesDB = require('./db/notesdb');
 
 // set up PORT for server hosting, if not available localhost 8000 will be used
 const PORT = process.env.PORT || 8000;
@@ -12,21 +12,21 @@ app.use(express.json());
 
 //HTML Routes
 
-app.get('/notes',(req,res)=>res.sendFile(path.join(__dirname,'./public/notes.html')));
-app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'./public/index.html')));
+app.get('/notes',(req,res)=> res.sendFile(path.join(__dirname,'./public/notes.html')));
+app.get('*',(req,res)=> res.sendFile(path.join(__dirname,'./public/index.html')));
 
 /* When loading server using a '*' route it will default to index.html this needs to be stacked last
 or else other routes will not work */
 
 // API get data
 
-app.get('/api/notes',(req,res)=> res.json(DbArray));
+app.get('/api/notes',(req,res)=> res.json(NotesDB));
 
 //API post data
 
 app.post('/api/notes',(req,res) =>{
     const newNote = req.body;
-    DbArray.push(newNote);
+    NotesDB.push(newNote);
     res.json(true);
 })
 
