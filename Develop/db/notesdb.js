@@ -2,8 +2,8 @@
 
 const DBarray = [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        title: "Test Title",
+        text: "Test text",
     }
 ];
 

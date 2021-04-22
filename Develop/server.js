@@ -20,11 +20,11 @@ or else other routes will not work */
 
 // API get data
 
-app.get('api/notes',(req,res)=> res.json(DbArray));
+app.get('/api/notes',(req,res)=> res.json(DbArray));
 
 //API post data
 
-app.post('api/notes',(req,res) =>{
+app.post('/api/notes',(req,res) =>{
     const newNote = req.body;
     DbArray.push(newNote);
     res.json(true);
