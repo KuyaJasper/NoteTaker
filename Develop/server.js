@@ -1,7 +1,8 @@
-// set up global variables for server.
+// Global variables for server.
 const express = require('express');
 const path = require('path');
 const app = express();
+
 // set up PORT for server hosting, if not available localhost 8000 will be used
 const PORT = process.env.PORT || 8000;
 
