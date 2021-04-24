@@ -1,9 +1,10 @@
 // Global variables for server.
 const express = require('express');
+const { fstat } = require('fs');
 const path = require('path');
 const app = express();
-const NotesDB = require('./db/notesdb');
-
+const { v4: uuid} = require('uuid');
+const NotesDB = require('./db/db.json');
 // set up PORT for server hosting, if not available localhost 8000 will be used
 const PORT = process.env.PORT || 8000;
 
@@ -22,7 +23,9 @@ app.get('/api/notes',(req,res)=> res.json(NotesDB));
 //API post data
 
 app.post('/api/notes',(req,res) =>{
-    const newNote = req.body;
+    let id = uuid();
+    let newNote = req.body;
+    newNote.id = id;
     NotesDB.push(newNote);
     res.json(true);
 })

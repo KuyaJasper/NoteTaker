@@ -7,7 +7,7 @@ For this application, we created a javascript file that created a markdown file.
   * [Installation](#Installation)
   * [Usage](#Usage)
   * [License](#License)
-  * [Screenrecording](#Screenrecording)
+  * [Screen Recording](#Screen-Recording)
   * [Questions](#Questions)
 
 # Installation
@@ -43,7 +43,7 @@ Follow the prompts, and the markdown file should be created in your 'utils' fold
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://kuyajasper.mit-license.org)
 
 
-# Screenrecording
+# Screen Recording
 
 ![ScreenshotRecording](INSERT SCREENRECORDING HERE)
 
