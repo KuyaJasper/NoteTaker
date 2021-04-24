@@ -1,8 +1,7 @@
 # Note Taker
 
 # Desctiption
-For this application, we created a javascript file that created a markdown file. This was accomplished by using node.js and inquirer.
-
+For this application, we created a database server using node packages. The packages dependencies are: "express, path, and uuid".
 # Table of Contents
   * [Installation](#Installation)
   * [Usage](#Usage)
@@ -16,22 +15,18 @@ This project was created using 'node.js' Make sure to have node.js installed bef
 To learn how to install Node, [Click Here](https://nodejs.org/en/download/package-manager/).
 
 
-Next you will need to install inquirer. To do so type in the following commands into your terminal.
-
-```bash
-npm i inquirer
-```
-
-To install necessary files, make sure your directory is changed to the 'Develop' folder.
-
-Open up Terminal and type in the following command:
+Next you will need to install the necessary packages in the package.json file. To do so, enter the following:
 
 ```bash
 npm i install
 ```
-The package.json files included in this repository will let you install the necessary information to run the application.
+
+The necessary node modules foluder should now be in your repository.
 
 # Usage
+
+[Click Here To Launce Application](https://notetakerkuyajasper.herokuapp.com/)
+
 To run the application, use Terminal to open the 'Develop' folder followed by:
 
 ```bash
