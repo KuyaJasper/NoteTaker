@@ -46,7 +46,7 @@ http://localhost:8000
 
 # License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://kuyajasper.mit-license.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://kuya-jasper.mit-license.org)
 
 
 # Screen Recording
