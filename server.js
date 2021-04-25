@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const { v4: uuid } = require('uuid');
-const NotesDB = require('./db/db.json');
+let NotesDB = require('./db/db.json');
 
 
 // set up PORT for server hosting, if not available localhost 8000 will be used
@@ -24,7 +24,7 @@ app.get('/api/notes', (req, res) => res.json(NotesDB));
 
 //API post data
 
-app.post('/api/notes',(req,res) =>{
+app.post('/api/notes', (req, res) => {
     let idNumber = uuid();
     let newNote = req.body;
     newNote.id = idNumber;
@@ -35,13 +35,14 @@ app.post('/api/notes',(req,res) =>{
 
 //Delete post
 app.delete('/api/notes/:id', (req, res) => {
-    let noteList = JSON.parse(fs.readFileSync('./db/db.json'));
-    noteList = noteList.filter((note) => {
-        return note.id != req.params.id
-    });
-    fs.writeFile('./db/db.json', JSON.stringify(noteList), () => {
-        res.json(noteList);
-    });
+    const { id } = req.params;
+    const deleted = NotesDB.find(note => note.id === id)
+    if (deleted) {
+        NotesDB = NotesDB.filter(note => note.id !== id);
+        res.status(200).json(deleted);
+    } else {
+        res.status(404).json({ message: "Note does not exist" })
+    }
 });
 
 
