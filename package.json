@@ -1,18 +1,25 @@
 {
-  "name": "note-taker",
+  "name": "notetaker",
   "version": "1.0.0",
+  "description": "Run this server to have your own personal note taking application!",
   "main": "server.js",
   "scripts": {
-    "test": "",
+    "test": "\"\"",
     "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuyaJasper/NoteTaker.git"
+  },
+  "author": "Jasper Abarquez",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuyaJasper/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/KuyaJasper/NoteTaker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "path": "^0.12.7",
+    "install": "^0.13.0",
     "uuid": "^8.3.2"
-  },
-  "devDependencies": {},
-  "description": ""
+  }
 }

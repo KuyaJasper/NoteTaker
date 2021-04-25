@@ -1,7 +1,8 @@
 # Note Taker
 
 # Desctiption
-For this application, we created a database server using node packages. The packages dependencies are: "express, path, and uuid".
+For this application, we created a database server using Express.js, which is a node package.
+
 # Table of Contents
   * [Installation](#Installation)
   * [Usage](#Usage)
@@ -21,18 +22,28 @@ Next you will need to install the necessary packages in the package.json file. T
 npm i install
 ```
 
-The necessary node modules foluder should now be in your repository.
+You should now have access to 'express.js' and 'uuid'. These packages are vital to run the application.
 
 # Usage
 
-[Click Here To Launce Application](https://notetakerkuyajasper.herokuapp.com/)
-
-To run the application, use Terminal to open the 'Develop' folder followed by:
+To run the application locally. Type in the following in your terminal/bash:
 
 ```bash
-node index.js
+npm start
 ```
-Follow the prompts, and the markdown file should be created in your 'utils' folder when finished!
+
+If everything was successful, you should see this in your terminal
+
+```bash
+App listening on PORT 8000
+```
+
+The last step should be to go to your internet browswer (Chrome is preffered) and type into the address bar
+
+```bash
+http://localhost:8000
+```
+
 # License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://kuyajasper.mit-license.org)
@@ -40,7 +51,10 @@ Follow the prompts, and the markdown file should be created in your 'utils' fold
 
 # Screen Recording
 
-![ScreenshotRecording](INSERT SCREENRECORDING HERE)
+![ScreenshotRecording](./Assets/ScreenRecording.gif)
+
+
+[Click Here To Launch Application](https://notetakerkuyajasper.herokuapp.com/)
 
 # Questions
 
